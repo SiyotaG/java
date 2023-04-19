@@ -1,0 +1,17 @@
+// find the years, month , days
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+      int mins;
+      long yr,month,day,remmyr,remmon;
+      Scanner object = new Scanner(System.in);
+        System.out.println("Enter the minutes");
+        mins=object.nextInt();
+        yr=mins/(365*24*60);
+        remmyr=mins%(365*24*60);
+        month=remmyr/43800;          //Minutes in month
+        remmon=remmyr%43800;
+        day=remmon%1440;
+        System.out.println(yr+" years " + month + " month " + day + " day ");
+    }
+}
